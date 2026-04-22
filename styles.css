@@ -1,0 +1,737 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7f7f7;
+}
+nav {
+  top: 0;
+  background-color: #f7f7f7;
+
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding-block: 1.5rem;
+}
+
+.genLayout {
+  max-width: 1200px;
+  margin: auto;
+}
+.innerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerNav > h1 {
+  font-family: "Playfair Display", serif;
+  text-transform: lowercase;
+  font-size: 3rem;
+}
+#toggle,
+.hamb {
+  display: none;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.navItems > a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #303030;
+  font-family: "Work Sans", sans-serif;
+}
+
+.navItems > button {
+  color: #303030;
+
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+  border: 1px solid;
+  text-transform: capitalize;
+  font-size: 11px;
+}
+
+/* Nav Responsive Code */
+@media (min-width: 260px) and (max-width: 500px) {
+  .hamb {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .innerNav {
+    width: calc(100% - 30px);
+  }
+
+  .navRight {
+    display: none;
+  }
+}
+/* styling for banner */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem;
+  background-color: #ffdd81;
+  border-radius: 25px;
+  margin-top: 7rem;
+  color: #303030;
+}
+
+.bannerContent {
+  flex: 1;
+}
+
+.bannerContent > h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  width: 450px;
+  font-weight: 400;
+}
+
+.bannerContent > h1 > span {
+  font-weight: 800;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.bannerContent > p {
+  width: 400px;
+  margin-block: 1rem;
+  font-size: 15px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.btnGroup {
+  margin-top: 5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btnGroup > button {
+  padding: 1rem 2rem;
+  border-radius: 7px;
+  text-transform: capitalize;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+}
+
+.btnGroup > button:first-child {
+  background-color: #303030;
+  border: none;
+  color: #fff;
+}
+.btnGroup > button:last-child {
+  background-color: transparent;
+  border: 1px solid #303030;
+}
+.bannerContent > h5 {
+  margin-top: 3rem;
+  font-size: 15px;
+  font-family: "Work Sans", sans-serif;
+}
+.bannerContent > h6 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+.bannerImg {
+  width: 40%;
+  height: 70vh;
+}
+.bannerImg > img {
+  width: 100%;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .banner {
+    width: calc(100% - 30px);
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .bannerContent {
+    width: 100%;
+  }
+  .bannerContent > h1 {
+    font-size: 2rem;
+    width: 200px;
+  }
+  .bannerContent > p {
+    width: 300px;
+  }
+  .bannerImg {
+    width: 100%;
+    height: 50vh;
+  }
+}
+.bannerBottom {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* align-items: center; */
+  gap: 7rem;
+  padding: 1rem 4rem;
+  border: 1px solid #303030;
+  border-radius: 25px;
+  margin-top: 3rem;
+}
+.bannerBottomContent > h2 {
+  padding-bottom: 1.5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+}
+.bannerBottomContent > p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .bannerBottom {
+    margin: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* flex-direction: column; */
+    /* justify-content: center; */
+  }
+  .bannerBottomContent > h2 {
+    font-size: 15px;
+    padding-bottom: 0.5rem;
+  }
+  .bannerBottomContent > p {
+    font-size: 10px;
+  }
+}
+/* What Section */
+.whatSection {
+  margin-top: 10rem;
+}
+.whatSection > p,
+.howSection > p,
+.guides > p,
+.pricing > p {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.whatSection > h1,
+.howSection > h1 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+
+  font-weight: 400;
+  font-size: 3rem;
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+.whatSection > h1 > span,
+.howSection > h1 > span {
+  font-style: italic;
+  font-weight: 800;
+}
+.whatSectionCont {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.whatImg {
+  max-width: 100%;
+  margin: auto;
+  flex: 1;
+}
+.whatImg > img {
+  /* width: 400px; */
+  width: 500px;
+}
+.whatTexts {
+  flex: 1;
+}
+.whatTexts > div {
+  padding: 3rem 2rem;
+  font-family: "Work Sans", sans-serif;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  width: 95%;
+  font-size: 12px;
+}
+.whatTexts > div > p {
+  width: 100%;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .whatSectionCont {
+    flex-direction: column;
+    padding: 12px;
+  }
+  .whatImg > img {
+    width: 360px;
+    margin-bottom: 10px;
+  }
+  .whatTexts > div {
+    width: 100%;
+  }
+}
+
+/* Works Wrapper */
+
+.worksWrapper {
+  margin-top: 5rem;
+}
+.worksWrapper > p {
+  /* text-align: center; */
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.worksWrapper > h1 {
+  font-family: "Playfair Display", serif;
+  width: 300px;
+  font-weight: 300;
+}
+
+.worksWrapper > h1 > span {
+  font-weight: 800;
+  font-style: italic;
+}
+.worksGrid {
+  margin-top: 1.7rem;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  /* position: relative; */
+}
+.workGridCard {
+  padding: 3rem 2rem;
+  border-radius: 15px;
+}
+.gridTitle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 1rem;
+}
+.gridTitle > h1 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 3rem;
+}
+.gridTitle > h4 {
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+.workGridCard > p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.workGridCard:first-child {
+  background-color: #ffdd81;
+}
+.workGridCard:nth-child(2),
+.workGridCard:nth-child(6),
+.workGridCard:nth-child(7) {
+  background-color: #fff;
+}
+
+/* .starr1 {
+  top: -500;
+  right: 100;
+  position: absolute;
+}
+.starr {
+  top: 100;
+  right: 0;
+  position: absolute;
+} */
+.workGridCard:nth-child(4) {
+  grid-row: span 2;
+}
+.workGridCard:nth-child(4) > img {
+  width: 90%;
+}
+.workGridCard:nth-child(5) {
+  border: 1px solid #303030;
+}
+.workGridCard:nth-child(7) {
+  grid-column: span 2;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .worksWrapper {
+    margin: 12px;
+  }
+  .worksGrid {
+    grid-template-columns: 1fr;
+  }
+  .workGridCard:nth-child(7) {
+    grid-column: span 1;
+  }
+  .workGridCard:nth-child(3) {
+    display: none;
+  }
+  .workGridCard:nth-child(4) {
+    padding: 0;
+    grid-row: span 1;
+  }
+  .workGridCard:nth-child(4) > img {
+    width: 100%;
+  }
+  .worksWrapper > h1 {
+    font-size: 2rem;
+  }
+  .gridTitle > h1 {
+    font-size: 2rem;
+  }
+  .gridTitle > h4 {
+    font-size: 10px;
+  }
+  .workGridCard > p {
+    font-size: 14px;
+  }
+}
+/* how section  */
+.howSection {
+  margin-top: 10rem;
+}
+.howSection > h1 {
+  max-width: 300px;
+}
+.howSecCont {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* justify-content: center; */
+  margin-top: 2rem;
+}
+.howLeftCont {
+  background-color: #ffdd81;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  border-radius: 25px;
+  padding: 5rem;
+}
+
+.howLeftCont > h1,
+.howRightCont > h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  padding-bottom: 3rem;
+}
+.howLeftCont > h1 > span,
+.howRightCont > h1 > span {
+  font-weight: 700;
+  font-style: italic;
+}
+.howLeftCont > p,
+.howRightCont > p {
+  padding: 1rem 2rem;
+  border: 1px solid #303030;
+  background-color: #f7f7f7;
+  margin-bottom: 1rem;
+  border-radius: 25px;
+  font-size: 15px;
+}
+.howRightCont {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 1px solid #303030;
+  border-radius: 25px;
+  padding: 5rem;
+}
+.howLeftCont > img,
+.howRightCont > img {
+  width: 100%;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .howSection {
+    margin: 12px;
+  }
+  .howSecCont {
+    flex-direction: column;
+  }
+  .howLeftCont > h1,
+  .howRightCont > h1 {
+    font-size: 2rem;
+  }
+  .howLeftCont > p,
+  .howRightCont > p {
+    font-size: 12px;
+  }
+}
+/* Testimonial Sec */
+.testimonials {
+  margin: 10rem auto;
+}
+.testimonials > p {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.testContCon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.testCont {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+}
+.testContCon > h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 2rem;
+  line-height: 0.9;
+}
+
+.testContCon > h2 > span {
+  font-weight: 800;
+  font-style: italic;
+}
+.testCont > p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .testimonials {
+    margin-inline: 12px;
+  }
+  .testimonials > p {
+    font-size: 12px;
+  }
+  .testContCon {
+    grid-template-columns: 1fr;
+  }
+  .testContCon > h2 {
+    font-size: 3rem;
+  }
+}
+/* guides section */
+.guides > p {
+}
+.guides > h1,
+.pricing > h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 4rem;
+}
+.guides > h1 > span,
+.pricing > h1 > span {
+  font-weight: 800;
+  font-style: italic;
+}
+.guideCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.guideflx > h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-block: 1rem;
+}
+.guideflx > p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+.guideflx > p > span {
+  text-transform: uppercase;
+}
+
+.guideImg {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+  border-radius: 15px;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .guides {
+    margin-inline: 12px;
+  }
+  .guides > h1,
+  .pricing > h1 {
+    font-size: 2rem;
+  }
+  .guideCont {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+/* pricing */
+.pricing {
+  margin-block: 10rem;
+}
+.pricingCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pricingContcon {
+  padding: 4.5rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #303030;
+}
+.pricingContcon > h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.pricingContcon > p {
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+.pricingContcon > p > span {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.pricingContcon > h2 {
+  font-size: 2rem;
+
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+.pricingContcon > h2 > span {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 3rem;
+}
+.pricingContcon > button {
+  font-size: 14px;
+  padding: 1rem 4rem;
+  color: #fff;
+  background-color: #303030;
+  border-radius: 10px;
+  margin-top: 4rem;
+  font-family: "Work Sans", sans-serif;
+}
+.pricingCont > div:nth-child(2) {
+  background-color: #ffdd81;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  .pricingCont {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+/* footer */
+footer {
+  padding: 3rem;
+  border-radius: 25px;
+  background-color: #303030;
+  margin-bottom: 10rem;
+  color: #f7f7f7;
+}
+footer > h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.footCont {
+  display: flex;
+}
+.ftleft {
+  flex: 1;
+}
+.footMenu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 16px;
+  gap: 0.7rem;
+  font-family: "Work Sans", sans-serif;
+  margin: 2rem;
+  font-weight: 300;
+}
+.footMenu > li > a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.footIcon {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+}
+.footIconm > img {
+  width: 15px;
+}
+.ftleft > p {
+  font-weight: 500;
+  font-size: 15px;
+  padding: 2rem;
+}
+.ftright {
+  flex: 1;
+  background-color: #ffdd81;
+  border-radius: 25px;
+  color: #303030;
+  padding: 3rem;
+}
+.ftright > h1 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  font-family: "Playfair Display", serif;
+}
+.ftright > h1 > span {
+  font-weight: 800;
+  font-style: italic;
+}
+.ftright > p {
+  width: 90%;
+  font-size: 18px;
+  padding-block: 2rem 2.5rem;
+  font-family: "Work Sans", sans-serif;
+}
+.ftright > button {
+  font-size: 14px;
+
+  padding: 1rem 4rem;
+  color: #fff;
+  background-color: #303030;
+  border-radius: 10px;
+  font-family: "Work Sans", sans-serif;
+}
+@media (min-width: 260px) and (max-width: 500px) {
+  footer {
+    margin-inline: 12px;
+  }
+  .footCont {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

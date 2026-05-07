@@ -72,6 +72,27 @@ nav {
 
   .navRight {
     display: none;
+    background-color: rgb(46, 29, 8);
+    opacity: 0.9;
+    width: 70%;
+    right: 1rem;
+    top: 4.5rem;
+    padding: 1rem 1.2rem;
+    position: absolute;
+  }
+  .navItems {
+    flex-direction: column;
+  }
+  .navItems > a {
+    color: #fff;
+    padding-block: 0.5rem;
+    border-bottom: 2px solid #fff;
+  }
+  .navItems > a {
+    width: 150px;
+  }
+  #toggle:checked + .navRight {
+    display: block;
   }
 }
 /* styling for banner */
@@ -531,8 +552,7 @@ nav {
   }
 }
 /* guides section */
-.guides > p {
-}
+
 .guides > h1,
 .pricing > h1 {
   text-align: center;
